@@ -49,12 +49,12 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
           children: [
             Text(
               phone,
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
             Text(
               'Verify Phone Number',
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleLarge,
               textAlign: TextAlign.center,
             ),
             const Text(
@@ -152,7 +152,7 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
             .updateUserProfileField(userFieldPhone, phone);
       }
       EasyLoading.dismiss();
-      if(mounted)Navigator.pop(context);
+      if (mounted) Navigator.pop(context);
     }).catchError((error) {
       EasyLoading.dismiss();
       print(error.toString());
